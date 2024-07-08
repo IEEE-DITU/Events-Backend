@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/auth',authRoute);
+app.use('/',eventR)
 
 app.listen(PORT, (error) =>{
     if(!error)
