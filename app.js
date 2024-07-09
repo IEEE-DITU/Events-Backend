@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const authRoute = require('./routes/authRoute');
-
+const eventRoute = require('./routes/eventRoute');
 
 const app = express();
 const PORT = 3000;  
@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/auth',authRoute);
-app.use('/',eventRoute)
+app.use('/event',eventRoute)
 
 app.listen(PORT, (error) =>
     {
